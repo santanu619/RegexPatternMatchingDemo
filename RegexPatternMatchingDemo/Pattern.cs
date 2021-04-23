@@ -12,7 +12,8 @@ namespace RegexPatternMatchingDemo
         // string Regex_Pincode = "^[a-z0-9A-Z]+[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}$";
         // string Regex_Pincode = "^[a-z0-9A-Z]+([._+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
         //string Regex_Pincode = " ^(?!invalid)(.(?!invalid))*$";
-        string Regex_Pincode = "^[1-9][0-9]{5}$";
+        //string Regex_Pincode = "^[1-9][0-9]{5}$";
+        string Regex_Pincode = "^[a-z0-9A-Z]+([.#@_][a-zA-Z0-9]+)?[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,2})?$";
         public bool validatePinCode(string pincode)
         {
             return Regex.IsMatch(pincode, Regex_Pincode);
